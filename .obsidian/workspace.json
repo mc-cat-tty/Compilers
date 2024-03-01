@@ -4,55 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "fad413fbb1871db0",
+        "id": "b08c457787672279",
         "type": "tabs",
         "children": [
           {
-            "id": "ece67bebae2143ba",
+            "id": "2e3b50eebf7edff4",
             "type": "leaf",
             "state": {
               "type": "empty",
               "state": {}
             }
-          },
-          {
-            "id": "b5df67186adb7f8f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1.  Introduzione.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7302f7fe8a24e78f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2. Alfabeti, Linguaggi ed Espressioni Regolari.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "cf69310bf2b6858a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2. Alfabeti, Linguaggi ed Espressioni Regolari.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -102,7 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 329.5
   },
   "right": {
     "id": "8bda8b135354a7dc",
@@ -118,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2. Alfabeti, Linguaggi ed Espressioni Regolari.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2. Alfabeti, Linguaggi ed Espressioni Regolari.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -157,17 +118,15 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "2. Alfabeti, Linguaggi ed Espressioni Regolari.md"
-              }
+              "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -179,19 +138,31 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "cf69310bf2b6858a",
+  "active": "2e3b50eebf7edff4",
   "lastOpenFiles": [
-    "Esercizi/flex/lex.yy.cc",
-    "Esercizi/flex/a.out",
+    "12. Complementi.md",
+    "11. Gestione della memoria.md",
+    "10. Codice intermedio.md",
+    "C. Progettazione & Kaleidoscope's AST.md",
+    "9. AST.md",
+    "B. Bison.md",
+    "6. Parser.md",
     "3. Lexer.md",
-    "Esercizi/flex/first_tok.l",
-    "Esercizi/flex/hello_tok.l",
-    "Esercizi/flex",
-    "Esercizi",
-    "esercizi",
-    "Untitled.md",
-    "2. Alfabeti, Linguaggi ed Espressioni Regolari.md",
+    "8. Parser bottom-up.md",
+    "4. FSM.md",
     "A. Ripasso C++.md",
-    "1.  Introduzione.md"
+    "5. Linguaggi context-free e grammatiche.md",
+    "Esercizi/kal/kalcomp",
+    "Esercizi/kal/fibo.k",
+    "Esercizi/kal",
+    "1.  Introduzione.md",
+    "2. Alfabeti, Linguaggi ed Espressioni Regolari.md",
+    "MITH",
+    "Esercizi/flex/klex",
+    "Esercizi/flex/klex.cc",
+    "Esercizi/flex/hello_tok-5f7bc7ef.o.tmp",
+    "Esercizi/flex/hello_tok.cc",
+    "Esercizi/flex/klex.l",
+    "Esercizi/flex/wc_lex.l"
   ]
 }
