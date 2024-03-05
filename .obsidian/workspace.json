@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "1e2dbdc31e66b714",
+        "id": "9bfaf1c0b6039183",
         "type": "tabs",
         "children": [
           {
-            "id": "49b4afe9ad0f7c53",
+            "id": "3b3d6d6afe283735",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "285230f071571fa4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "14. Ripasso - anatomia di un compilatore.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "13. Introduzione al backend.md",
+                "file": "14. Ripasso - anatomia di un compilatore.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "13. Introduzione al backend.md",
+                "file": "14. Ripasso - anatomia di un compilatore.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "13. Introduzione al backend.md"
+                "file": "14. Ripasso - anatomia di un compilatore.md"
               }
             }
           }
@@ -146,10 +159,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "49b4afe9ad0f7c53",
+  "active": "285230f071571fa4",
   "lastOpenFiles": [
-    "Untitled.md",
     "13. Introduzione al backend.md",
+    "14. Ripasso - anatomia di un compilatore.md",
     "1.  Introduzione al frontend.md",
     "12. Complementi.md",
     "11. Gestione della memoria.md",
