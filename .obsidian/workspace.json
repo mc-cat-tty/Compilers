@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "14. Ripasso - anatomia di un compilatore.md",
+                "file": "14. Anatomia di un compilatore.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "14. Ripasso - anatomia di un compilatore.md",
+                "file": "14. Anatomia di un compilatore.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "14. Ripasso - anatomia di un compilatore.md",
+                "file": "14. Anatomia di un compilatore.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "14. Ripasso - anatomia di un compilatore.md"
+                "file": "14. Anatomia di un compilatore.md"
               }
             }
           }
@@ -162,7 +162,7 @@
   "active": "285230f071571fa4",
   "lastOpenFiles": [
     "13. Introduzione al backend.md",
-    "14. Ripasso - anatomia di un compilatore.md",
+    "14. Anatomia di un compilatore.md",
     "1.  Introduzione al frontend.md",
     "12. Complementi.md",
     "11. Gestione della memoria.md",
