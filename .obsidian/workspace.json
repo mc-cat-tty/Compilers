@@ -25,14 +25,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "14. Anatomia di un compilatore.md",
+                "file": "13. Introduzione al backend.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "14. Anatomia di un compilatore.md",
+                "file": "13. Introduzione al backend.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "14. Anatomia di un compilatore.md",
+                "file": "13. Introduzione al backend.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "14. Anatomia di un compilatore.md"
+                "file": "13. Introduzione al backend.md"
               }
             }
           }
@@ -159,10 +158,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "285230f071571fa4",
+  "active": "3b3d6d6afe283735",
   "lastOpenFiles": [
-    "13. Introduzione al backend.md",
     "14. Anatomia di un compilatore.md",
+    "13. Introduzione al backend.md",
     "1.  Introduzione al frontend.md",
     "12. Complementi.md",
     "11. Gestione della memoria.md",
