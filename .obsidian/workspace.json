@@ -4,31 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "9bfaf1c0b6039183",
+        "id": "9323dfd64a72de2f",
         "type": "tabs",
         "children": [
           {
-            "id": "3b3d6d6afe283735",
+            "id": "1caacebc3f245d12",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "14. Anatomia di un compilatore e IR.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "285230f071571fa4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "13. Introduzione al backend.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -97,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "14. Anatomia di un compilatore e IR.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "14. Anatomia di un compilatore e IR.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "14. Anatomia di un compilatore e IR.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -158,16 +138,27 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3b3d6d6afe283735",
+  "active": "1caacebc3f245d12",
   "lastOpenFiles": [
-    "D. LLVM optimization.md",
     "13. Introduzione al backend.md",
+    "D. LLVM optimization.md",
     "14. Anatomia di un compilatore e IR.md",
+    "C. Progettazione & Kaleidoscope's AST.md",
+    "EserciziBackend/TestPass1/out-a5104401.ll.tmp",
+    "EserciziBackend/TestPass1/out.ll",
+    "TestPass1BB.png",
+    "EserciziBackend/TestPass1/loop_o0-66545769.ll.tmp",
+    "EserciziBackend/TestPass1/loop_o0-9231409e.ll.tmp",
+    "EserciziBackend/TestPass1/loop_o0.ll",
+    "EserciziBackend/TestPass1/fibo-0d8535ce.ll.tmp",
+    "EserciziBackend/TestPass1/fibo-b1e2102d.ll.tmp",
+    "EserciziBackend/TestPass1/fibo-c93af684.ll.tmp",
+    "EserciziBackend/TestPass1/fibo.ll",
+    "EserciziBackend/TestPass1/fibo-cb0fca4a.ll.tmp",
     "1.  Introduzione al frontend.md",
     "12. Complementi.md",
     "11. Gestione della memoria.md",
     "10. Codice intermedio.md",
-    "C. Progettazione & Kaleidoscope's AST.md",
     "9. AST.md",
     "B. Bison.md",
     "6. Parser.md",
@@ -176,16 +167,6 @@
     "4. FSM.md",
     "A. Ripasso C++.md",
     "5. Linguaggi context-free e grammatiche.md",
-    "Esercizi/kal/kalcomp",
-    "Esercizi/kal/fibo.k",
-    "Esercizi/kal",
-    "2. Alfabeti, Linguaggi ed Espressioni Regolari.md",
-    "MITH",
-    "Esercizi/flex/klex",
-    "Esercizi/flex/klex.cc",
-    "Esercizi/flex/hello_tok-5f7bc7ef.o.tmp",
-    "Esercizi/flex/hello_tok.cc",
-    "Esercizi/flex/klex.l",
-    "Esercizi/flex/wc_lex.l"
+    "2. Alfabeti, Linguaggi ed Espressioni Regolari.md"
   ]
 }
