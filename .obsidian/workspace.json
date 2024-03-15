@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "9323dfd64a72de2f",
+        "id": "3093ce312cd0334f",
         "type": "tabs",
         "children": [
           {
-            "id": "1caacebc3f245d12",
+            "id": "0b1f13a8aef70ac5",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "D. LLVM optimization.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "D. LLVM optimization.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "D. LLVM optimization.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "D. LLVM optimization.md"
+              }
             }
           }
         ],
@@ -138,14 +146,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1caacebc3f245d12",
+  "active": "0b1f13a8aef70ac5",
   "lastOpenFiles": [
-    "13. Introduzione al backend.md",
-    "D. LLVM optimization.md",
-    "14. Anatomia di un compilatore e IR.md",
-    "C. Progettazione & Kaleidoscope's AST.md",
-    "EserciziBackend/TestPass1/out-a5104401.ll.tmp",
+    "EserciziBackend/TestPass1/fibo.bc",
+    "EserciziBackend/TestPass1/opt_fibo.bc",
     "EserciziBackend/TestPass1/out.ll",
+    "C. Progettazione & Kaleidoscope's AST.md",
+    "B. Bison.md",
+    "D. LLVM optimization.md",
+    "13. Introduzione al backend.md",
+    "14. Anatomia di un compilatore e IR.md",
+    "EserciziBackend/TestPass1/out-a5104401.ll.tmp",
     "TestPass1BB.png",
     "EserciziBackend/TestPass1/loop_o0-66545769.ll.tmp",
     "EserciziBackend/TestPass1/loop_o0-9231409e.ll.tmp",
@@ -154,13 +165,11 @@
     "EserciziBackend/TestPass1/fibo-b1e2102d.ll.tmp",
     "EserciziBackend/TestPass1/fibo-c93af684.ll.tmp",
     "EserciziBackend/TestPass1/fibo.ll",
-    "EserciziBackend/TestPass1/fibo-cb0fca4a.ll.tmp",
     "1.  Introduzione al frontend.md",
     "12. Complementi.md",
     "11. Gestione della memoria.md",
     "10. Codice intermedio.md",
     "9. AST.md",
-    "B. Bison.md",
     "6. Parser.md",
     "3. Lexer.md",
     "8. Parser bottom-up.md",

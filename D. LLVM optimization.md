@@ -95,9 +95,37 @@ Nella versione ottimizzata con O2 vengono creati solamente 3 BB:
 3. utilizza un'espressione PHI per scegliere il valore di ritorno
 
 Si notano i seguenti passi di ottimizzazione:
-- inlining
+- inlining. **Callsite**: punto della chiamata a funzioneiu
 - LICM - Loop Independent Code Motion - of `g` increment
 - DCE - Dead Code Elimination - of the loop
 - GVN - Global Value Numbering
 
 https://en.wikipedia.org/wiki/Value_numbering
+
+# Passo di ottimizzazione
+Tutti i passi ereditano da **CRTP mix-in**: `PassInfoMixin<PassT>`
+
+Ogni passo deve implementare un metodo `PreservedAnalysis run(Function &F, FunctionAnalysisManager &AM)`
+
+Il primo parametro può essere una qualunque unità IR, non per forza una `Function`. Eg. `Module`, `BasicBlock`, `Instruction`
+
+`PreservedAnalysis` segnala al pass manager che l'analisi in quel punto si preserva, mentre in altri punti deve essere rieseguita. Questo è utile nel caso in cui si modifichi, ad esempio, il CFG.
+
+Dove posizionare il passo? `.../include/llvm/Transforms/Utils` per l'header e `.../lib/llvm/Transforms/Utils`
+
+#Ricorda di creare l'header file e di modificare il `CMakeLists.txt` nella sottodirectory di `lib/`
+
+È ora necessario registrare il passo nel *pass manager*: `FUNCTION_PASS("testpass", TestPass())` all'interno del file `.../llvm/lib/Passes/PassRegistry.def`
+Aggiungiamo `#include "llvm/Transforms/Utils/TestPass.h"` a `.../lib/Passes/PassBuilder.cpp`
+
+Ora compiliamo: `make opt && make install-opt`
+
+Per runnare il nostro passo:
+```bash
+clang -O2 -emit-llvm -o -c file.c file.bc
+opt -passes=testpass file.bc -o opt_file.bc
+```
+
+#Vedi docs su ottimizzazione
+
+#Assignment: esercizio 2
