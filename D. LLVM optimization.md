@@ -102,7 +102,7 @@ Si notano i seguenti passi di ottimizzazione:
 
 https://en.wikipedia.org/wiki/Value_numbering
 
-# Passo di ottimizzazione
+# Primo Passo di Analisi
 Tutti i passi ereditano da **CRTP mix-in**: `PassInfoMixin<PassT>`
 
 Ogni passo deve implementare un metodo `PreservedAnalysis run(Function &F, FunctionAnalysisManager &AM)`
@@ -128,4 +128,66 @@ opt -passes=testpass file.bc -o opt_file.bc
 
 #Vedi docs su ottimizzazione
 
-#Assignment: esercizio 2
+https://llvm.org/doxygen/classes.html
+
+Nel caso in cui dovessimo registrare un passo che lavora al livello dei moduli, registreremo `MODULE_PASS("testpass-mod", TestPass())` all'interno del `PassRegistry`.
+
+#Attenzione 
+Nota che due passi che lavorano a granularità diverse possono essere definiti all'interno della stessa classe (sfruttando l'overloading dei metodi), ma devono essere registrati con nomi differenti nel registry.
+```bash
+opt -passes="testpass-module,testpass-function" loop_o0.bc
+# O in alternativa
+opt -p "testpass-module,testpass-function" loop_o0.bc
+```
+
+# Primo Passo di Trasformazione
+>La IR in LLVM usa la forma SSA per la quale una variabile non può essere usata più di una volta.
+
+## Dead Stores
+Come rilevare *dead stores* nella *DCE* - Dead Code Elimination?
+```C
+main() {
+	int a = 100;  // Questo statement può essere eliminato
+	int a = 42;
+	printf(a);
+}
+```
+
+Con una rappresentazione SSA diventerebbe:
+```C
+main() {
+	int a1 = 100;
+	int a2 = 200;
+	printf(a2);
+}
+```
+
+`a1` non ha utilizzi. Può essere rimossa.
+
+## User - Use - Value
+Supponiamo di voler ottimizzare:
+```llvm-ir
+%2 = add %1, 0  ; Identità algebrica 
+%3 = mul %2, 2
+```
+
+Posso rimuovere la prima istruzione a patto di aggiornare gli usi di `%2`, altrimenti programma andrebbe in crash. Devo aggiornare gli utilizzi di `%2` sostituendoli con `%1`.
+
+Le `Instruction` LLVM ereditano da `Value` e `User`. Esiste quindi una gerarchia del tipo:
+```
+Value -> User -> Instruction
+```
+
+Dalla classe `Value` ereditano quasi tutte le altre classi di LLVM. Un nodo `Value` ha:
+- `getType()` tipo del valore (integer, fp, etc.)
+- `hasName()` verifico se il nome esiste
+- `getName()` ottengo il nome
+
+Le `Instruction` giocano il ruolo di `User` e `Usee`. Una istruzione se viene usata, è uno `Usee`; ma è anche `User` di qualche altro valore, che usa come operando.
+
+Per scorrere gli operandi di una istruzione si usano gli iteratori `op_begin` e `op_end`.
+
+Perchè un'istruzione è anche `Usee`? Come abbiamo visto nella prima parte del corso, nella riga di codice `%2 = add %1, 0`, `%2` è la rappresentazione dell'istruzione `add`.
+In base al cast effettuato `IstrUser` o `Value`, si ottengono due rappresentazioni diverse.
+
+Per scorrere gli utilizzatori dell'istruzione si usano gli iteratori `user_begin` e `user_end`.
