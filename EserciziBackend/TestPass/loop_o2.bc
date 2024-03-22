@@ -6,31 +6,29 @@ target triple = "arm64-apple-macosx14.0.0"
 @g = local_unnamed_addr global i32 0, align 4
 
 ; Function Attrs: mustprogress nofree norecurse nosync nounwind ssp willreturn memory(readwrite, argmem: none, inaccessiblemem: none) uwtable(sync)
-define i32 @g_incr(i32 noundef %c) local_unnamed_addr #0 {
-entry:
-  %0 = load i32, ptr @g, align 4, !tbaa !5
-  %add = add nsw i32 %0, %c
-  store i32 %add, ptr @g, align 4, !tbaa !5
-  ret i32 %add
+define i32 @g_incr(i32 noundef %0) local_unnamed_addr #0 {
+  %2 = load i32, ptr @g, align 4, !tbaa !5
+  %3 = add nsw i32 %2, %0
+  store i32 %3, ptr @g, align 4, !tbaa !5
+  ret i32 %3
 }
 
 ; Function Attrs: mustprogress nofree norecurse nosync nounwind ssp willreturn memory(readwrite, argmem: none, inaccessiblemem: none) uwtable(sync)
-define i32 @loop(i32 noundef %a, i32 noundef %b, i32 noundef %c) local_unnamed_addr #0 {
-entry:
-  %g.promoted = load i32, ptr @g, align 4, !tbaa !5
-  %cmp3 = icmp slt i32 %a, %b
-  br i1 %cmp3, label %for.body.preheader, label %for.end
+define i32 @loop(i32 noundef %0, i32 noundef %1, i32 noundef %2) local_unnamed_addr #0 {
+  %4 = load i32, ptr @g, align 4, !tbaa !5
+  %5 = icmp slt i32 %0, %1
+  br i1 %5, label %6, label %10
 
-for.body.preheader:                               ; preds = %entry
-  %0 = sub i32 %b, %a
-  %1 = mul i32 %0, %c
-  %2 = add i32 %g.promoted, %1
-  store i32 %2, ptr @g, align 4, !tbaa !5
-  br label %for.end
+6:                                                ; preds = %3
+  %7 = sub i32 %1, %0
+  %8 = mul i32 %7, %2
+  %9 = add i32 %4, %8
+  store i32 %9, ptr @g, align 4, !tbaa !5
+  br label %10
 
-for.end:                                          ; preds = %for.body.preheader, %entry
-  %3 = phi i32 [ %2, %for.body.preheader ], [ %g.promoted, %entry ]
-  ret i32 %3
+10:                                               ; preds = %6, %3
+  %11 = phi i32 [ %9, %6 ], [ %4, %3 ]
+  ret i32 %11
 }
 
 attributes #0 = { mustprogress nofree norecurse nosync nounwind ssp willreturn memory(readwrite, argmem: none, inaccessiblemem: none) uwtable(sync) "frame-pointer"="non-leaf" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="apple-m1" "target-features"="+aes,+crc,+dotprod,+fp-armv8,+fp16fml,+fullfp16,+lse,+neon,+ras,+rcpc,+rdm,+sha2,+sha3,+v8.1a,+v8.2a,+v8.3a,+v8.4a,+v8.5a,+v8a,+zcm,+zcz" }
