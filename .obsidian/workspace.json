@@ -148,6 +148,8 @@
   },
   "active": "0b1f13a8aef70ac5",
   "lastOpenFiles": [
+    "README.md",
+    "EserciziBackend/README.md",
     "EserciziBackend/FirstAssignment/out.ll",
     "EserciziBackend/FirstAssignment/main.c",
     "EserciziBackend/FirstAssignment/multi_instr.ll",
@@ -158,7 +160,6 @@
     "EserciziBackend/FirstAssignment/test.ll",
     "EserciziBackend/FirstAssignment/test_out2.ll",
     "EserciziBackend/FirstAssignment/algebraic_id copy.ll",
-    "EserciziBackend/StrengthReduction/test_out2.ll",
     "C. Progettazione & Kaleidoscope's AST.md",
     "B. Bison.md",
     "D. LLVM optimization.md",
